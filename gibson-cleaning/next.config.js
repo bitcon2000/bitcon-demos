@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/bitcon-demos/gibson-cleaning',
+  basePath: '/gibson-cleaning',
 };
 
 module.exports = nextConfig;
