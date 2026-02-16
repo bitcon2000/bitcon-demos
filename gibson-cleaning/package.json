@@ -1,0 +1,38 @@
+{
+  "name": "gibson-cleaning",
+  "version": "1.0.0",
+  "description": "Premium commercial cleaning service website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.24",
+    "axios": "^1.13.5",
+    "node-geocoder": "^4.4.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5"
+  },
+  "keywords": [
+    "cleaning",
+    "janitorial",
+    "waterloo",
+    "commercial"
+  ],
+  "author": "Gibson's Cleaning",
+  "license": "MIT"
+}
