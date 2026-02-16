@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gibson's Janitorial Service | Waterloo ON</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #333; }
+    .header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 60px 40px; text-align: center; }
+    .header h1 { font-size: 3em; margin-bottom: 10px; }
+    .header p { font-size: 1.3em; opacity: 0.9; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    h2 { color: #1e40af; font-size: 2em; margin-bottom: 20px; }
+    .content { line-height: 1.8; font-size: 1.05em; }
+    .services-list { list-style: none; margin-top: 20px; }
+    .services-list li { padding: 12px 0; padding-left: 30px; position: relative; }
+    .services-list li:before { content: "✓"; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
+    .contact-box { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 30px; border-radius: 6px; }
+    .contact-item { margin-bottom: 20px; }
+    .contact-label { font-weight: 600; color: #1e40af; font-size: 0.95em; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-value { font-size: 1.15em; margin-top: 5px; }
+    a { color: #3b82f6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .phone-btn { display: inline-block; background: #3b82f6; color: white; padding: 14px 40px; border-radius: 6px; margin-top: 15px; font-weight: 600; }
+    .phone-btn:hover { background: #1e40af; text-decoration: none; }
+    .rating { color: #ffc107; font-size: 1.3em; }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; gap: 40px; }
+      .header h1 { font-size: 2em; }
+      .container { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>🏢 Gibson's Janitorial Service</h1>
+    <p>Professional Cleaning & Janitorial Services for Waterloo</p>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <div>
+        <h2>About Gibson's</h2>
+        <p class="content">Gibson's Janitorial Service has been Waterloo's trusted name in professional cleaning for over 20 years. We specialize in comprehensive janitorial services for commercial spaces, offices, and facilities of all sizes.</p>
+        <p class="content" style="margin-top: 20px;">Our experienced team delivers consistent, reliable cleaning that meets the highest standards. We pride ourselves on attention to detail and customer satisfaction.</p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul class="services-list">
+          <li>Daily Janitorial Cleaning</li>
+          <li>Office Building Maintenance</li>
+          <li>Floor Care & Waxing</li>
+          <li>Carpet Cleaning</li>
+          <li>Window Cleaning</li>
+          <li>Restroom Sanitation</li>
+          <li>Customized Cleaning Plans</li>
+          <li>Emergency Cleaning Services</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="text-align: center; margin-bottom: 40px;">Contact Us Today</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">
+          <a href="tel:+15197466792">(519) 746-6792</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">590 Kraus Drive, Waterloo, ON N2L 6K2</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Rating</div>
+        <div class="contact-value"><span class="rating">★★★★★</span> 5/5</div>
+      </div>
+      <a href="tel:+15197466792" class="phone-btn">📞 Call for Free Estimate</a>
+    </div>
+  </div>
+</body>
+</html>
