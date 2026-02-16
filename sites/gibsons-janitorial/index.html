@@ -3,82 +3,145 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gibson's Janitorial Service | Waterloo ON</title>
+  <title>Gibson's Janitorial Service | Commercial Cleaning Waterloo</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #333; }
-    .header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 60px 40px; text-align: center; }
-    .header h1 { font-size: 3em; margin-bottom: 10px; }
-    .header p { font-size: 1.3em; opacity: 0.9; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-    h2 { color: #1e40af; font-size: 2em; margin-bottom: 20px; }
-    .content { line-height: 1.8; font-size: 1.05em; }
-    .services-list { list-style: none; margin-top: 20px; }
-    .services-list li { padding: 12px 0; padding-left: 30px; position: relative; }
-    .services-list li:before { content: "✓"; position: absolute; left: 0; color: #3b82f6; font-weight: bold; }
-    .contact-box { background: #f0f4ff; border-left: 4px solid #3b82f6; padding: 30px; border-radius: 6px; }
-    .contact-item { margin-bottom: 20px; }
-    .contact-label { font-weight: 600; color: #1e40af; font-size: 0.95em; text-transform: uppercase; letter-spacing: 0.5px; }
-    .contact-value { font-size: 1.15em; margin-top: 5px; }
-    a { color: #3b82f6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .phone-btn { display: inline-block; background: #3b82f6; color: white; padding: 14px 40px; border-radius: 6px; margin-top: 15px; font-weight: 600; }
-    .phone-btn:hover { background: #1e40af; text-decoration: none; }
-    .rating { color: #ffc107; font-size: 1.3em; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #333; line-height: 1.6; }
+    .nav { background: white; border-bottom: 1px solid #eee; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-size: 1.2em; font-weight: 700; color: #1e40af; }
+    .nav-links { display: flex; gap: 30px; }
+    .nav-links a { text-decoration: none; color: #666; font-weight: 500; }
+    .nav-links a:hover { color: #1e40af; }
+    .hero { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 80px 40px; text-align: center; }
+    .hero h1 { font-size: 3.5em; margin-bottom: 15px; font-weight: 800; }
+    .hero p { font-size: 1.3em; opacity: 0.95; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn { display: inline-block; background: white; color: #1e40af; padding: 14px 40px; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; cursor: pointer; border: none; font-size: 1em; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
+    h2 { font-size: 2.5em; color: #1e40af; margin-bottom: 40px; text-align: center; }
+    h3 { font-size: 1.3em; margin-bottom: 15px; color: #1e40af; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 60px; }
+    .card { background: #f0f4ff; padding: 30px; border-radius: 8px; text-align: center; }
+    .card-icon { font-size: 3em; margin-bottom: 15px; }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 40px; }
+    .service-item { background: #f0f4ff; padding: 20px; border-left: 4px solid #3b82f6; }
+    .service-item strong { color: #1e40af; }
+    .section-alt { background: #f9faf9; }
+    .faq { max-width: 800px; margin: 0 auto; }
+    .faq-item { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 25px; }
+    .faq-q { font-weight: 600; color: #1e40af; font-size: 1.05em; margin-bottom: 8px; }
+    .faq-a { color: #666; line-height: 1.8; }
+    .contact { background: #1e40af; color: white; padding: 60px 40px; text-align: center; }
+    .contact h2 { color: white; margin-bottom: 20px; }
+    .contact-info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 40px 0; text-align: center; }
+    .info-box { padding: 20px; }
+    .info-box strong { font-size: 1.1em; display: block; margin-bottom: 8px; }
+    .info-box a { color: white; text-decoration: underline; }
     @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; gap: 40px; }
-      .header h1 { font-size: 2em; }
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2em; }
+      .grid { grid-template-columns: 1fr; }
+      .contact-info { grid-template-columns: 1fr; }
+      .services { grid-template-columns: 1fr; }
       .container { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>🏢 Gibson's Janitorial Service</h1>
-    <p>Professional Cleaning & Janitorial Services for Waterloo</p>
+  <div class="nav">
+    <div class="nav-logo">🏢 Gibson's Janitorial</div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <h1>Professional Janitorial & Cleaning Services</h1>
+    <p>20+ years serving Waterloo businesses. Reliable, professional facilities maintenance you can count on.</p>
+    <a href="#contact" class="btn">Get Free Estimate</a>
   </div>
 
   <div class="container">
+    <h2>Why Choose Gibson's?</h2>
     <div class="grid">
-      <div>
-        <h2>About Gibson's</h2>
-        <p class="content">Gibson's Janitorial Service has been Waterloo's trusted name in professional cleaning for over 20 years. We specialize in comprehensive janitorial services for commercial spaces, offices, and facilities of all sizes.</p>
-        <p class="content" style="margin-top: 20px;">Our experienced team delivers consistent, reliable cleaning that meets the highest standards. We pride ourselves on attention to detail and customer satisfaction.</p>
+      <div class="card">
+        <div class="card-icon">🏆</div>
+        <h3>20+ Years Experience</h3>
+        <p>Trusted by Waterloo businesses since the beginning. Proven track record of reliability.</p>
       </div>
-      <div>
-        <h2>Services</h2>
-        <ul class="services-list">
-          <li>Daily Janitorial Cleaning</li>
-          <li>Office Building Maintenance</li>
-          <li>Floor Care & Waxing</li>
-          <li>Carpet Cleaning</li>
-          <li>Window Cleaning</li>
-          <li>Restroom Sanitation</li>
-          <li>Customized Cleaning Plans</li>
-          <li>Emergency Cleaning Services</li>
-        </ul>
+      <div class="card">
+        <div class="card-icon">✓</div>
+        <h3>Professional Team</h3>
+        <p>Trained, experienced staff committed to maintaining the highest standards of cleanliness.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⭐</div>
+        <h3>5-Star Rated</h3>
+        <p>Consistently rated 5/5. Your facility's appearance is our priority.</p>
       </div>
     </div>
+  </div>
 
-    <h2 style="text-align: center; margin-bottom: 40px;">Contact Us Today</h2>
-    <div class="contact-box">
-      <div class="contact-item">
-        <div class="contact-label">Phone</div>
-        <div class="contact-value">
-          <a href="tel:+15197466792">(519) 746-6792</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Location</div>
-        <div class="contact-value">590 Kraus Drive, Waterloo, ON N2L 6K2</div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-label">Rating</div>
-        <div class="contact-value"><span class="rating">★★★★★</span> 5/5</div>
-      </div>
-      <a href="tel:+15197466792" class="phone-btn">📞 Call for Free Estimate</a>
+  <div class="container section-alt" style="background: #f9faf9;">
+    <h2 id="services">Janitorial Services</h2>
+    <div class="services">
+      <div class="service-item"><strong>✓</strong> Daily & Recurring Cleaning</div>
+      <div class="service-item"><strong>✓</strong> Office Building Maintenance</div>
+      <div class="service-item"><strong>✓</strong> Floor Care & Waxing</div>
+      <div class="service-item"><strong>✓</strong> Carpet Cleaning</div>
+      <div class="service-item"><strong>✓</strong> Window & Facade Cleaning</div>
+      <div class="service-item"><strong>✓</strong> Restroom Sanitization</div>
     </div>
+    <p style="text-align: center; color: #666; margin-top: 30px;">Customized cleaning plans for offices, retail, industrial, and commercial facilities. Flexible scheduling to fit your operations.</p>
+  </div>
+
+  <div class="container">
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">What types of facilities do you service?</div>
+        <div class="faq-a">Office buildings, retail spaces, industrial facilities, and commercial properties of all sizes. We customize plans based on your specific needs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you offer flexible scheduling?</div>
+        <div class="faq-a">Yes. We work around your business hours — morning, evening, or weekend schedules available for minimal disruption.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are your staff trained and insured?</div>
+        <div class="faq-a">Absolutely. All team members are trained professionals and our company is fully insured for your protection.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's your approach to floor care?</div>
+        <div class="faq-a">We specialize in professional floor care including stripping, waxing, buffing, and maintenance for long-lasting results.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you handle emergency cleaning?</div>
+        <div class="faq-a">Yes. We offer emergency and rush cleaning services to address unexpected facility needs quickly.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <h2>Request Your Free Estimate</h2>
+    <p style="margin-bottom: 30px; font-size: 1.1em;">Professional facilities maintenance for Waterloo businesses. Let's discuss your cleaning needs.</p>
+    <div class="contact-info">
+      <div class="info-box">
+        <strong>📞 Call</strong>
+        <a href="tel:+15197466792">(519) 746-6792</a>
+      </div>
+      <div class="info-box">
+        <strong>📍 Location</strong>
+        590 Kraus Drive, Waterloo, ON N2L 6K2
+      </div>
+      <div class="info-box">
+        <strong>⭐ Rating</strong>
+        5/5 (Perfect Rating)
+      </div>
+    </div>
+    <a href="tel:+15197466792" class="btn">Call Now</a>
   </div>
 </body>
 </html>
