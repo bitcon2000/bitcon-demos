@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibson's Janitorial Service - Premium Commercial Cleaning</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: #1e293b; background: #fff; line-height: 1.6; }
+        header { position: fixed; top: 0; width: 100%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); z-index: 50; }
+        nav { max-width: 1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: bold; color: #0d9488; }
+        nav a { margin: 0 1.5rem; color: #1e293b; text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: #0d9488; }
+        
+        .hero { margin-top: 64px; padding: 5rem 2rem; background: linear-gradient(135deg, #0f172a 0%, #0d9488 100%); color: white; text-align: center; }
+        .hero h1 { font-size: 3.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95; }
+        .cta-btn { display: inline-block; padding: 1rem 2rem; background: #0d9488; color: white; border: none; border-radius: 0.75rem; cursor: pointer; font-weight: 600; margin: 0.5rem; transition: all 0.3s; }
+        .cta-btn:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .cta-btn-outline { background: transparent; border: 2px solid white; }
+        .cta-btn-outline:hover { background: white; color: #0d9488; }
+        
+        .section { max-width: 1280px; margin: 0 auto; padding: 4rem 2rem; }
+        .section h2 { font-size: 2.5rem; font-family: 'Playfair Display', serif; margin-bottom: 1rem; text-align: center; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        
+        .services { background: #f8fafc; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .service-card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+        .service-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .service-card h3 { color: #0f172a; margin-bottom: 0.5rem; }
+        .service-card p { color: #666; margin-bottom: 1rem; }
+        .learn-more { color: #0d9488; font-weight: 600; cursor: pointer; }
+        
+        .why-us { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .benefit { background: white; padding: 1.5rem; border-radius: 0.75rem; border-top: 4px solid #0d9488; position: relative; padding-left: 3rem; }
+        .benefit::before { content: '✓'; position: absolute; left: 1rem; top: 1rem; background: #0d9488; color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .benefit h3 { color: #0f172a; margin-bottom: 0.5rem; }
+        .benefit p { color: #666; }
+        
+        .cta-box { background: linear-gradient(to right, #0f172a, #0d9488); color: white; padding: 3rem; border-radius: 1rem; text-align: center; }
+        .cta-box h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+        
+        .testimonials { background: #f8fafc; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial { background: white; padding: 2rem; border-radius: 1rem; border-top: 4px solid #0d9488; }
+        .stars { color: #fbbf24; margin-bottom: 1rem; }
+        .testimonial-text { color: #666; font-style: italic; margin-bottom: 1rem; }
+        .testimonial-author { font-weight: 600; color: #0f172a; }
+        .testimonial-company { color: #999; font-size: 0.9rem; }
+        
+        .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-form input, .contact-form textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 0.5rem; font-family: inherit; }
+        .contact-form button { padding: 1rem; background: #0d9488; color: white; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; }
+        .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+        .info-block { display: flex; gap: 1rem; }
+        .info-icon { font-size: 2rem; }
+        .info-text { }
+        .info-text strong { color: #0f172a; }
+        .map-placeholder { background: #ddd; border-radius: 1rem; height: 300px; display: flex; align-items: center; justify-content: center; color: #999; }
+        
+        footer { background: #0f172a; color: white; padding: 3rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+        .footer-section h4 { margin-bottom: 1rem; color: #0d9488; }
+        .footer-section a { color: #aaa; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .footer-section a:hover { color: #0d9488; }
+        .footer-bottom { border-top: 1px solid #333; padding-top: 2rem; display: flex; justify-content: space-between; }
+        
+        @media (max-width: 768px) {
+            nav { flex-direction: column; }
+            nav a { margin: 0.5rem; }
+            .hero h1 { font-size: 2rem; }
+            .section { padding: 2rem 1rem; }
+            .contact { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Gibson's</div>
+            <div style="display: flex;">
+                <a href="#services">Services</a>
+                <a href="#why">Why Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Premium Commercial Cleaning You Can Trust</h1>
+        <p>Spotless Results for Offices & Facilities in Waterloo Region</p>
+        <button class="cta-btn">Get a Free Quote</button>
+        <button class="cta-btn cta-btn-outline">Learn More</button>
+    </section>
+
+    <section class="section services" id="services">
+        <h2>Our Services</h2>
+        <p class="section-subtitle">Tailored cleaning solutions for every business need</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Office Cleaning</h3>
+                <p>Daily, weekly, or monthly office maintenance with attention to detail. Professional teams ensure your workspace stays pristine.</p>
+                <span class="learn-more">Learn More →</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Post-Construction Cleanup</h3>
+                <p>Comprehensive cleanup after renovations. We handle debris, dust, and specialized deep cleaning for new spaces.</p>
+                <span class="learn-more">Learn More →</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Medical Facilities</h3>
+                <p>Specialized sanitization for healthcare environments. HIPAA-compliant, hospital-grade cleaning with proper protocols.</p>
+                <span class="learn-more">Learn More →</span>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Facility Maintenance</h3>
+                <p>Customized maintenance plans for any commercial facility. From lobbies to restrooms, we keep everything spotless.</p>
+                <span class="learn-more">Learn More →</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="why">
+        <h2>Why Choose Gibson's</h2>
+        <p class="section-subtitle">Premium service, professional results, every single time</p>
+        <div class="why-us">
+            <div class="benefit">
+                <h3>Experienced Team</h3>
+                <p>15+ years serving Waterloo businesses with proven expertise</p>
+            </div>
+            <div class="benefit">
+                <h3>Eco-Friendly Products</h3>
+                <p>Safe for employees, environment, and budgets</p>
+            </div>
+            <div class="benefit">
+                <h3>24/7 Support</h3>
+                <p>Always available for urgent cleaning needs</p>
+            </div>
+            <div class="benefit">
+                <h3>Fully Insured</h3>
+                <p>Complete coverage and peace of mind</p>
+            </div>
+            <div class="benefit">
+                <h3>Custom Plans</h3>
+                <p>Tailored solutions that fit your schedule</p>
+            </div>
+            <div class="benefit">
+                <h3>Quality Guaranteed</h3>
+                <p>If you're not satisfied, we're not done</p>
+            </div>
+        </div>
+        <div class="cta-box">
+            <h3>Ready to Experience the Difference?</h3>
+            <p style="margin-bottom: 1.5rem;">Join 200+ satisfied businesses in Waterloo Region</p>
+            <button class="cta-btn" style="background: white; color: #0d9488;">Schedule a Free Consultation</button>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="section-subtitle">Real feedback from real businesses we've helped</p>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Gibson's transformed our office. Professional, reliable, and they notice details others miss. Highly recommend!"</p>
+                <p class="testimonial-author">Sarah Mitchell</p>
+                <p class="testimonial-company">Tech Solutions Inc.</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The sanitation standards are exceptional. Our patients and staff feel confident in the cleanliness. Outstanding service."</p>
+                <p class="testimonial-author">John Winters</p>
+                <p class="testimonial-company">Waterloo Medical Clinic</p>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Post-construction cleanup was thorough and efficient. Turned our mess into a pristine space in one day."</p>
+                <p class="testimonial-author">Emma Chen</p>
+                <p class="testimonial-company">Urban Construction Ltd.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Get Your Free Quote</h2>
+        <p class="section-subtitle">No obligation. No hidden fees. Just honest pricing.</p>
+        <div class="contact">
+            <div class="contact-form">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Phone">
+                <input type="text" placeholder="Company Name">
+                <textarea rows="5" placeholder="Tell us about your needs..."></textarea>
+                <button class="cta-btn">Request a Free Quote</button>
+            </div>
+            <div class="contact-info">
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 1rem;">
+                    <h3 style="margin-bottom: 1.5rem;">Get in Touch</h3>
+                    <div class="info-block">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <strong>Location</strong>
+                            <p>Waterloo, Ontario, Canada</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <strong>Phone</strong>
+                            <p>(519) 555-0123</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <strong>Email</strong>
+                            <p>info@gibsonscleaning.com</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-text">
+                            <strong>Hours</strong>
+                            <p>Mon-Fri: 8am-6pm | Sat-Sun: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-placeholder">Interactive Map Coming Soon</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 style="color: #0d9488;">Gibson's</h4>
+                <p>Premium commercial cleaning services in Waterloo Region since 2009.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="#services">Office Cleaning</a>
+                <a href="#services">Post-Construction</a>
+                <a href="#services">Medical Facilities</a>
+                <a href="#services">Facility Maintenance</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="#why">About Us</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-section">
+                <h4>Get in Touch</h4>
+                <p>(519) 555-0123</p>
+                <p>info@gibsonscleaning.com</p>
+                <p>Waterloo, Ontario</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gibson's Janitorial Service. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#" style="color: #aaa;">Facebook</a>
+                <a href="#" style="color: #aaa;">Twitter</a>
+                <a href="#" style="color: #aaa;">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
