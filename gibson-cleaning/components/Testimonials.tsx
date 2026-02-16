@@ -1,85 +1,57 @@
 'use client';
 
+const testimonials = [
+  {
+    name: 'Sarah Mitchell',
+    company: 'Tech Solutions Inc.',
+    quote: 'Gibson\'s transformed our office. Professional, reliable, and they notice details others miss. Highly recommend!',
+    rating: 5,
+  },
+  {
+    name: 'John Winters',
+    company: 'Waterloo Medical Clinic',
+    quote: 'The sanitation standards are exceptional. Our patients and staff feel confident in the cleanliness. Outstanding service.',
+    rating: 5,
+  },
+  {
+    name: 'Emma Chen',
+    company: 'Urban Construction Ltd.',
+    quote: 'Post-construction cleanup was thorough and efficient. Turned our mess into a pristine space in one day.',
+    rating: 5,
+  },
+];
+
 export default function Testimonials() {
-  const testimonials = [
-    {
-      id: 1,
-      quote: "Gibson's transformed our office space. The attention to detail is unmatched. They're reliable, professional, and always go above and beyond.",
-      author: 'Sarah Mitchell',
-      title: 'Office Manager',
-      company: 'Tech Solutions Inc.',
-      rating: 5,
-    },
-    {
-      id: 2,
-      quote: "After our renovation, they cleaned up everything perfectly. Couldn't have asked for a more thorough post-construction cleanup. Highly recommended!",
-      author: 'David Chen',
-      title: 'Building Owner',
-      company: 'Waterloo Properties',
-      rating: 5,
-    },
-    {
-      id: 3,
-      quote: "For our medical facility, we needed expert care and strict protocols. Gibson's exceeded our expectations in every way. Our patients notice the pristine environment.",
-      author: 'Dr. Jennifer Park',
-      title: 'Clinic Director',
-      company: 'Wellness Medical Center',
-      rating: 5,
-    },
-  ];
-
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-navy via-slate-900 to-navy text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16" data-animate>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Trusted by Waterloo's Best
-          </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            See what our clients say about our services
-          </p>
-        </div>
+    <section id="testimonials" className="py-20 px-4 bg-light-gray">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-4">
+          What Our Clients Say
+        </h2>
+        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          Real feedback from real businesses we've helped
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, idx) => (
             <div
-              key={testimonial.id}
-              className="group bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-smooth hover-lift"
-              data-animate
+              key={idx}
+              className="bg-white p-8 rounded-2xl shadow-md hover-lift border-t-4 border-teal"
             >
-              {/* Star Rating */}
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-lg">★</span>
+                  <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
                 ))}
               </div>
-
-              {/* Quote */}
-              <p className="text-lg text-slate-200 mb-6 italic leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-
-              {/* Author Info */}
-              <div className="border-t border-white/10 pt-6">
-                <p className="font-semibold text-white">{testimonial.author}</p>
-                <p className="text-sm text-teal-300">{testimonial.title}</p>
-                <p className="text-xs text-slate-400">{testimonial.company}</p>
+              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
+              <div className="border-t pt-4">
+                <p className="font-semibold text-navy">{testimonial.name}</p>
+                <p className="text-sm text-gray-600">{testimonial.company}</p>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 text-center" data-animate>
-          <p className="text-lg text-slate-300 mb-6">
-            Join hundreds of satisfied clients in Waterloo
-          </p>
-          <button
-            onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-xl font-semibold hover:shadow-2xl transition-smooth hover-lift"
-          >
-            Get Started Today
-          </button>
         </div>
       </div>
     </section>

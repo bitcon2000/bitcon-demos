@@ -8,13 +8,10 @@ export default function Contact() {
     email: '',
     phone: '',
     company: '',
-    service: '',
     message: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -23,215 +20,144 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a backend
     console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: '',
-    });
+    alert('Thank you! We\'ll be in touch shortly.');
+    setFormData({ name: '', email: '', phone: '', company: '', message: '' });
   };
 
   return (
-    <section id="contact" className="py-20 bg-light-gray">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16" data-animate>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Get Your Free Quote
-          </h2>
-          <p className="text-lg text-slate-600">
-            No obligation. No pressure. Just honest pricing and professional service.
-          </p>
-        </div>
+    <section id="contact" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-4">
+          Get Your Free Quote
+        </h2>
+        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          No obligation. No hidden fees. Just honest pricing.
+        </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div id="quote-form" className="bg-white rounded-2xl p-8 shadow-sm" data-animate>
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Form */}
+          <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-navy mb-2">
-                  Full Name
-                </label>
+                <label className="block text-sm font-semibold mb-2">Full Name</label>
                 <input
                   type="text"
-                  id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth"
-                  placeholder="John Doe"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="Your name"
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-navy mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-navy mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-semibold mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="your@email.com"
+                />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-semibold text-navy mb-2">
-                  Company Name
-                </label>
+                <label className="block text-sm font-semibold mb-2">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="(555) 000-0000"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold mb-2">Company</label>
                 <input
                   type="text"
-                  id="company"
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth"
-                  placeholder="Your Company"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="Your company name"
                 />
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-navy mb-2">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth"
-                >
-                  <option value="">Select a service</option>
-                  <option value="office">Office Cleaning</option>
-                  <option value="construction">Post-Construction Cleanup</option>
-                  <option value="medical">Medical Facilities</option>
-                  <option value="carpet">Carpet & Upholstery</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-navy mb-2">
-                  Additional Details
-                </label>
+                <label className="block text-sm font-semibold mb-2">Tell us about your needs</label>
                 <textarea
-                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100 transition-smooth resize-none"
-                  placeholder="Tell us about your cleaning needs..."
+                  rows={5}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                  placeholder="Describe your cleaning requirements..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-lg font-semibold hover:shadow-lg transition-smooth hover-lift"
+                className="w-full bg-teal text-white font-semibold py-4 rounded-lg hover:bg-teal/90 transition-smooth"
               >
-                Request Free Quote
+                Request a Free Quote
               </button>
-
-              {submitted && (
-                <div className="p-4 bg-teal-50 border border-teal-200 rounded-lg text-teal-700 font-medium">
-                  ✓ Thank you! We'll be in touch within 24 hours.
-                </div>
-              )}
             </form>
           </div>
 
-          {/* Contact Info & Map */}
-          <div className="space-y-8" data-animate>
-            {/* Contact Details */}
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h3 className="text-2xl font-bold text-navy mb-6">Contact Information</h3>
+          {/* Info + Map */}
+          <div className="space-y-8">
+            <div className="bg-light-gray p-8 rounded-xl">
+              <h3 className="text-2xl font-bold mb-6">Get in Touch</h3>
               
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 text-xl">
-                      📞
-                    </div>
-                  </div>
+                  <div className="text-teal text-2xl">📍</div>
                   <div>
-                    <p className="font-semibold text-navy">Phone</p>
-                    <p className="text-slate-600">(519) 555-0123</p>
+                    <p className="font-semibold">Location</p>
+                    <p className="text-gray-600">Waterloo, Ontario, Canada</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 text-xl">
-                      📧
-                    </div>
-                  </div>
+                  <div className="text-teal text-2xl">📞</div>
                   <div>
-                    <p className="font-semibold text-navy">Email</p>
-                    <p className="text-slate-600">info@gibsonscleaning.com</p>
+                    <p className="font-semibold">Phone</p>
+                    <p className="text-gray-600">(519) 555-0123</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 text-xl">
-                      📍
-                    </div>
-                  </div>
+                  <div className="text-teal text-2xl">✉️</div>
                   <div>
-                    <p className="font-semibold text-navy">Location</p>
-                    <p className="text-slate-600">Waterloo, Ontario, Canada</p>
+                    <p className="font-semibold">Email</p>
+                    <p className="text-gray-600">info@gibsonscleaning.com</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-teal-100 flex items-center justify-center text-teal-600 text-xl">
-                      🕐
-                    </div>
-                  </div>
+                  <div className="text-teal text-2xl">⏰</div>
                   <div>
-                    <p className="font-semibold text-navy">Hours</p>
-                    <p className="text-slate-600">Mon - Fri: 8:00 AM - 6:00 PM</p>
-                    <p className="text-slate-600">Sat - Sun: By appointment</p>
+                    <p className="font-semibold">Hours</p>
+                    <p className="text-gray-600">Mon-Fri: 8am-6pm | Sat-Sun: By Appointment</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gradient-to-br from-slate-200 to-slate-100 rounded-2xl p-8 h-80 flex items-center justify-center border border-slate-200">
+            <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center border-2 border-gray-300">
               <div className="text-center">
-                <p className="text-4xl mb-4">📍</p>
-                <p className="text-slate-600 font-medium">Waterloo, Ontario</p>
-                <p className="text-sm text-slate-500 mt-2">Serving the Greater Waterloo Region</p>
+                <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p className="text-gray-600">Interactive Map Coming Soon</p>
               </div>
             </div>
           </div>

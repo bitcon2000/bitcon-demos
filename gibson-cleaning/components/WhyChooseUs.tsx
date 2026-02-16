@@ -1,77 +1,48 @@
 'use client';
 
+const benefits = [
+  { title: 'Experienced Team', description: '15+ years serving Waterloo businesses' },
+  { title: 'Eco-Friendly Products', description: 'Safe for employees, environment, and budgets' },
+  { title: '24/7 Support', description: 'Always available for urgent cleaning needs' },
+  { title: 'Fully Insured', description: 'Complete coverage and peace of mind' },
+  { title: 'Custom Plans', description: 'Tailored solutions that fit your schedule' },
+  { title: 'Quality Guaranteed', description: 'If you\'re not satisfied, we\'re not done' },
+];
+
 export default function WhyChooseUs() {
-  const benefits = [
-    {
-      number: '1',
-      title: 'Certified & Insured',
-      description: 'Fully licensed professionals with comprehensive insurance coverage and quality guarantees.',
-    },
-    {
-      number: '2',
-      title: 'Eco-Friendly Practices',
-      description: 'We use green cleaning products and sustainable methods that are safe for your environment.',
-    },
-    {
-      number: '3',
-      title: 'Flexible Scheduling',
-      description: 'Work around your schedule with flexible hours, including after-hours and weekend services.',
-    },
-    {
-      number: '4',
-      title: 'Competitive Pricing',
-      description: 'Premium service at fair prices. Free quotes and transparent billing with no hidden charges.',
-    },
-    {
-      number: '5',
-      title: '24/7 Support',
-      description: 'Responsive customer service team available around the clock for questions and emergency requests.',
-    },
-    {
-      number: '6',
-      title: 'Quality Guarantee',
-      description: 'We stand behind our work with satisfaction guarantees and rapid response to any concerns.',
-    },
-  ];
-
   return (
-    <section id="why-us" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16" data-animate>
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Why Choose Gibson's?
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Experience the difference that professional care and attention to detail can make
-          </p>
-        </div>
+    <section id="why" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-display font-bold text-center mb-4">
+          Why Choose Gibson's
+        </h2>
+        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          Premium service, professional results, every single time
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {benefits.map((benefit, idx) => (
             <div
               key={idx}
-              className="relative group"
-              data-animate
+              className="relative p-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-smooth border border-gray-100"
             >
-              {/* Card with subtle shadow */}
-              <div className="bg-gradient-to-br from-white to-light-gray rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-smooth">
-                {/* Number circle */}
-                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-teal-500 to-teal-700 text-white font-bold text-xl mb-6">
-                  {benefit.number}
-                </div>
-
-                <h3 className="text-xl font-bold text-navy mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-slate-600">
-                  {benefit.description}
-                </p>
-
-                {/* Decorative element */}
-                <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-teal-50 group-hover:scale-110 transition-transform"></div>
+              <div className="absolute top-6 left-6 w-8 h-8 rounded-full bg-teal text-white flex items-center justify-center font-bold text-sm">
+                ✓
               </div>
+              <h3 className="text-xl font-bold mb-3 ml-12">{benefit.title}</h3>
+              <p className="text-gray-600 ml-12">{benefit.description}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 bg-gradient-to-r from-navy to-teal rounded-2xl p-12 text-white text-center">
+          <h3 className="text-3xl font-display font-bold mb-4">Ready to Experience the Difference?</h3>
+          <p className="text-lg mb-8 opacity-90">
+            Join 200+ satisfied businesses in Waterloo Region
+          </p>
+          <button className="px-8 py-4 bg-white text-teal font-semibold rounded-xl hover-lift">
+            Schedule a Free Consultation
+          </button>
         </div>
       </div>
     </section>

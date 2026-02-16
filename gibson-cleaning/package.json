@@ -1,8 +1,7 @@
 {
   "name": "gibson-cleaning",
   "version": "1.0.0",
-  "description": "Premium commercial cleaning service website",
-  "private": true,
+  "description": "Premium commercial cleaning website for Gibson's Janitorial Service",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,28 +10,18 @@
     "export": "next build && next export"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
-    "next": "^16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "axios": "^1.6.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "autoprefixer": "^10.4.24",
-    "axios": "^1.13.5",
-    "node-geocoder": "^4.4.1",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5"
-  },
-  "keywords": [
-    "cleaning",
-    "janitorial",
-    "waterloo",
-    "commercial"
-  ],
-  "author": "Gibson's Cleaning",
-  "license": "MIT"
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16",
+    "typescript": "^5.2.0",
+    "@types/node": "^20.4.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0"
+  }
 }
