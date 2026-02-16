@@ -3,65 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sparkle Clean - Waterloo</title>
+  <title>Sparkle Clean | Professional Cleaning Waterloo ON</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    header { background: linear-gradient(135deg, #0066cc, #00a3ff); color: white; padding: 40px 20px; text-align: center; border-radius: 8px; margin-bottom: 30px; }
-    h1 { font-size: 2em; margin-bottom: 10px; }
-    .tagline { font-size: 1.1em; opacity: 0.95; }
-    .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    h2 { color: #0066cc; margin-bottom: 15px; font-size: 1.4em; }
-    .info-item { margin-bottom: 15px; }
-    .label { font-weight: 600; color: #0066cc; }
-    a { color: #0066cc; text-decoration: none; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #333; }
+    .header { background: linear-gradient(135deg, #003d99 0%, #0052cc 100%); color: white; padding: 60px 40px; text-align: center; }
+    .header h1 { font-size: 3em; margin-bottom: 10px; }
+    .header p { font-size: 1.3em; opacity: 0.9; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    h2 { color: #003d99; font-size: 2em; margin-bottom: 20px; }
+    .content { line-height: 1.8; font-size: 1.05em; }
+    .services-list { list-style: none; margin-top: 20px; }
+    .services-list li { padding: 12px 0; padding-left: 30px; position: relative; }
+    .services-list li:before { content: "✓"; position: absolute; left: 0; color: #0052cc; font-weight: bold; }
+    .contact-box { background: #f8f9fa; border-left: 4px solid #0052cc; padding: 30px; border-radius: 6px; }
+    .contact-item { margin-bottom: 20px; }
+    .contact-label { font-weight: 600; color: #003d99; font-size: 0.95em; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-value { font-size: 1.15em; margin-top: 5px; }
+    a { color: #0052cc; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .cta { display: inline-block; background: #0066cc; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
-    .cta:hover { background: #004999; text-decoration: none; }
-    .services { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-    .service { background: #f0f8ff; padding: 10px; border-left: 3px solid #0066cc; }
+    .phone-btn { display: inline-block; background: #0052cc; color: white; padding: 14px 40px; border-radius: 6px; margin-top: 15px; font-weight: 600; }
+    .phone-btn:hover { background: #003d99; text-decoration: none; }
+    .rating { color: #ffc107; font-size: 1.3em; }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; gap: 40px; }
+      .header h1 { font-size: 2em; }
+      .container { padding: 40px 20px; }
+    }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>Sparkle Clean</h1>
+    <p>Professional Cleaning Services for Waterloo Homes & Businesses</p>
+  </div>
+
   <div class="container">
-    <header>
-      <h1>✨ Sparkle Clean</h1>
-      <p class="tagline">Professional Cleaning Services in Waterloo</p>
-    </header>
-
-    <div class="section">
-      <h2>About Us</h2>
-      <p>Sparkle Clean has been serving Waterloo homes and businesses for 8 years. We specialize in residential and commercial cleaning with eco-friendly products and attention to detail.</p>
-    </div>
-
-    <div class="section">
-      <h2>Services</h2>
-      <div class="services">
-        <div class="service">Residential Cleaning</div>
-        <div class="service">Office Cleaning</div>
-        <div class="service">Deep Cleaning</div>
-        <div class="service">Move-in/Out</div>
+    <div class="grid">
+      <div>
+        <h2>About Sparkle Clean</h2>
+        <p class="content">Since 2015, Sparkle Clean has been the trusted choice for residential and commercial cleaning throughout Waterloo. Our team of certified, background-checked professionals delivers exceptional results with attention to detail and customer satisfaction guaranteed.</p>
+        <p class="content" style="margin-top: 20px;">We use eco-friendly, non-toxic cleaning products that are safe for families and pets while being effective against dirt, grime, and allergens.</p>
+      </div>
+      <div>
+        <h2>Services</h2>
+        <ul class="services-list">
+          <li>Residential Cleaning (Weekly, Bi-weekly, Monthly)</li>
+          <li>Office & Commercial Cleaning</li>
+          <li>Deep Cleaning & Move-In/Move-Out</li>
+          <li>Carpet & Upholstery Cleaning</li>
+          <li>Window & Pressure Washing</li>
+          <li>Post-Construction Cleaning</li>
+          <li>One-Time & Recurring Services</li>
+          <li>Free Quotes & Flexible Scheduling</li>
+        </ul>
       </div>
     </div>
 
-    <div class="section">
-      <div class="info-item">
-        <span class="label">📞 Phone:</span><br>
-        <a href="tel:+15195551234">(519) 555-1234</a>
+    <h2 style="text-align: center; margin-bottom: 40px;">Get in Touch</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">
+          <a href="tel:+15195553847">(519) 555-3847</a>
+        </div>
       </div>
-      <div class="info-item">
-        <span class="label">📍 Location:</span><br>
-        123 King St N, Waterloo, ON N2J 2X7
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">123 King Street North, Waterloo, ON N2J 2X7</div>
       </div>
-      <div class="info-item">
-        <span class="label">⭐ Rating:</span> 4.8/5 (87 reviews)
+      <div class="contact-item">
+        <div class="contact-label">Hours</div>
+        <div class="contact-value">Monday – Friday: 8am – 6pm | Saturday: 9am – 4pm | Sunday: Closed</div>
       </div>
-      <div class="info-item">
-        <span class="label">🕐 Hours:</span><br>
-        Mon-Sat: 8am-6pm | Sun: Closed
+      <div class="contact-item">
+        <div class="contact-label">Rating</div>
+        <div class="contact-value"><span class="rating">★★★★★</span> 4.8/5 (94 reviews)</div>
       </div>
-      <a href="tel:+15195551234" class="cta">Call Now</a>
+      <a href="tel:+15195553847" class="phone-btn">📞 Call Now for Free Quote</a>
     </div>
   </div>
 </body>

@@ -3,65 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eco Shine - Waterloo</title>
+  <title>Eco Shine | Green Cleaning Waterloo Ontario</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
-    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-    header { background: linear-gradient(135deg, #22c55e, #16a34a); color: white; padding: 40px 20px; text-align: center; border-radius: 8px; margin-bottom: 30px; }
-    h1 { font-size: 2em; margin-bottom: 10px; }
-    .tagline { font-size: 1.1em; opacity: 0.95; }
-    .section { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    h2 { color: #22c55e; margin-bottom: 15px; font-size: 1.4em; }
-    .info-item { margin-bottom: 15px; }
-    .label { font-weight: 600; color: #22c55e; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #333; }
+    .header { background: linear-gradient(135deg, #1b7f36 0%, #22c55e 100%); color: white; padding: 60px 40px; text-align: center; }
+    .header h1 { font-size: 3em; margin-bottom: 10px; }
+    .header p { font-size: 1.3em; opacity: 0.9; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+    h2 { color: #1b7f36; font-size: 2em; margin-bottom: 20px; }
+    .content { line-height: 1.8; font-size: 1.05em; }
+    .services-list { list-style: none; margin-top: 20px; }
+    .services-list li { padding: 12px 0; padding-left: 30px; position: relative; }
+    .services-list li:before { content: "✓"; position: absolute; left: 0; color: #22c55e; font-weight: bold; }
+    .contact-box { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 30px; border-radius: 6px; }
+    .contact-item { margin-bottom: 20px; }
+    .contact-label { font-weight: 600; color: #1b7f36; font-size: 0.95em; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-value { font-size: 1.15em; margin-top: 5px; }
     a { color: #22c55e; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .cta { display: inline-block; background: #22c55e; color: white; padding: 12px 30px; border-radius: 6px; text-decoration: none; margin-top: 10px; }
-    .cta:hover { background: #16a34a; text-decoration: none; }
-    .services { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-    .service { background: #f0fdf4; padding: 10px; border-left: 3px solid #22c55e; }
+    .phone-btn { display: inline-block; background: #22c55e; color: white; padding: 14px 40px; border-radius: 6px; margin-top: 15px; font-weight: 600; }
+    .phone-btn:hover { background: #1b7f36; text-decoration: none; }
+    .rating { color: #ffc107; font-size: 1.3em; }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; gap: 40px; }
+      .header h1 { font-size: 2em; }
+      .container { padding: 40px 20px; }
+    }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>🌿 Eco Shine</h1>
+    <p>Chemical-Free, Sustainable Cleaning for Waterloo Homes</p>
+  </div>
+
   <div class="container">
-    <header>
-      <h1>🌿 Eco Shine</h1>
-      <p class="tagline">Green Cleaning for Waterloo Homes</p>
-    </header>
-
-    <div class="section">
-      <h2>About Us</h2>
-      <p>Eco Shine uses 100% natural, biodegradable products to clean homes without harming the environment. Family-owned since 2015, we're committed to green cleaning solutions.</p>
-    </div>
-
-    <div class="section">
-      <h2>Services</h2>
-      <div class="services">
-        <div class="service">House Cleaning</div>
-        <div class="service">Kitchen Deep Clean</div>
-        <div class="service">Bathroom Deep Clean</div>
-        <div class="service">Eco-Friendly Products</div>
+    <div class="grid">
+      <div>
+        <h2>About Eco Shine</h2>
+        <p class="content">Eco Shine is Waterloo's leading green cleaning company. Since 2013, we've been providing professional, environmentally responsible cleaning services using only natural, biodegradable products. No harsh chemicals, no toxic fumes—just clean homes and a healthier planet.</p>
+        <p class="content" style="margin-top: 20px;">Our certified cleaners use plant-based solutions that are safe for children, pets, and sensitive individuals while delivering professional-grade results.</p>
+      </div>
+      <div>
+        <h2>Our Services</h2>
+        <ul class="services-list">
+          <li>Eco-Friendly Home Cleaning</li>
+          <li>Kitchen Deep Cleaning</li>
+          <li>Bathroom Sanitization</li>
+          <li>Laundry & Bedroom Care</li>
+          <li>Green Carpet Care</li>
+          <li>Office & Commercial Spaces</li>
+          <li>Allergy-Safe Cleaning</li>
+          <li>Weekly, Bi-weekly & Monthly Plans</li>
+        </ul>
       </div>
     </div>
 
-    <div class="section">
-      <div class="info-item">
-        <span class="label">📞 Phone:</span><br>
-        <a href="tel:+15195552847">(519) 555-2847</a>
+    <h2 style="text-align: center; margin-bottom: 40px;">Contact Eco Shine</h2>
+    <div class="contact-box">
+      <div class="contact-item">
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">
+          <a href="tel:+15195552108">(519) 555-2108</a>
+        </div>
       </div>
-      <div class="info-item">
-        <span class="label">📍 Location:</span><br>
-        456 Erb St W, Waterloo, ON N2L 1W8
+      <div class="contact-item">
+        <div class="contact-label">Location</div>
+        <div class="contact-value">456 Erb Street West, Waterloo, ON N2L 1W8</div>
       </div>
-      <div class="info-item">
-        <span class="label">⭐ Rating:</span> 4.9/5 (64 reviews)
+      <div class="contact-item">
+        <div class="contact-label">Hours</div>
+        <div class="contact-value">Monday – Friday: 8am – 5pm | Saturday: 9am – 3pm | Sunday: Closed</div>
       </div>
-      <div class="info-item">
-        <span class="label">🕐 Hours:</span><br>
-        Mon-Fri: 8am-5pm | Sat: 9am-3pm
+      <div class="contact-item">
+        <div class="contact-label">Rating</div>
+        <div class="contact-value"><span class="rating">★★★★★</span> 4.9/5 (127 reviews)</div>
       </div>
-      <a href="tel:+15195552847" class="cta">Call Now</a>
+      <a href="tel:+15195552108" class="phone-btn">📞 Call Now for Free Consultation</a>
     </div>
   </div>
 </body>
