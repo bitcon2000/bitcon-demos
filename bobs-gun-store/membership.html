@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership - Bob's Gun Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-slate-100">
+    <!-- Navigation -->
+    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-amber-500">Bob's Gun Store</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-amber-500 transition">Home</a>
+                    <a href="about.html" class="hover:text-amber-500 transition">About</a>
+                    <a href="booking.html" class="hover:text-amber-500 transition">Book Range Time</a>
+                    <a href="membership.html" class="text-amber-500">Membership</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-b from-slate-800 to-slate-900 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4 text-white">Membership Plans</h2>
+            <p class="text-lg text-slate-300">Join our community and enjoy exclusive benefits.</p>
+        </div>
+    </section>
+
+    <!-- Membership Plans -->
+    <section class="py-16 px-4 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Bronze Plan -->
+                <div class="bg-slate-800 rounded-lg border-2 border-slate-700 overflow-hidden hover:border-amber-600 transition">
+                    <div class="bg-slate-700 px-6 py-4">
+                        <h3 class="text-2xl font-bold text-amber-500">Bronze</h3>
+                        <p class="text-slate-300 text-sm">Entry-level membership</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <p class="text-3xl font-bold text-white">$49<span class="text-lg text-slate-400">/month</span></p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>2 hours range time per week</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>10% discount on ammo & accessories</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Access to member events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Monthly newsletter</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-slate-500 mr-3">✗</span>
+                                <span class="text-slate-500">Guest passes</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-2 rounded transition">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Silver Plan (Featured) -->
+                <div class="bg-slate-800 rounded-lg border-2 border-amber-600 overflow-hidden transform md:scale-105 z-10">
+                    <div class="bg-amber-600 px-6 py-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Silver</h3>
+                                <p class="text-amber-100 text-sm">Most Popular</p>
+                            </div>
+                            <span class="bg-amber-700 text-white px-3 py-1 rounded text-xs font-bold">BEST VALUE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <p class="text-3xl font-bold text-white">$99<span class="text-lg text-slate-400">/month</span></p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>8 hours range time per week</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>15% discount on ammo & accessories</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Priority range booking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>2 guest passes per month</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Exclusive member events</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 rounded transition">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gold Plan -->
+                <div class="bg-slate-800 rounded-lg border-2 border-slate-700 overflow-hidden hover:border-amber-600 transition">
+                    <div class="bg-slate-700 px-6 py-4">
+                        <h3 class="text-2xl font-bold text-amber-500">Gold</h3>
+                        <p class="text-slate-300 text-sm">Ultimate membership</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <p class="text-3xl font-bold text-white">$199<span class="text-lg text-slate-400">/month</span></p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-300 text-sm">
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Unlimited range time</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>20% discount on all items</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Priority booking always</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>4 guest passes per month</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-amber-500 mr-3">✓</span>
+                                <span>Free training course per year</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-2 rounded transition">
+                            Choose Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
+                        <h4 class="font-bold text-amber-500 mb-2">How do I sign up?</h4>
+                        <p class="text-slate-300 text-sm">Visit our store or call us at 519-999-9191. We'll get you set up with a membership agreement and payment information. Memberships are month-to-month with no long-term contracts.</p>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
+                        <h4 class="font-bold text-amber-500 mb-2">Can I upgrade or downgrade my membership?</h4>
+                        <p class="text-slate-300 text-sm">Yes! You can change your membership tier at any time. Changes take effect on your next billing cycle.</p>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
+                        <h4 class="font-bold text-amber-500 mb-2">What documents do I need?</h4>
+                        <p class="text-slate-300 text-sm">You'll need a valid ID and a PAL (Possession and Acquisition License) to join. Beginners without a PAL can book supervised range sessions.</p>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
+                        <h4 class="font-bold text-amber-500 mb-2">Are guest passes transferable?</h4>
+                        <p class="text-slate-300 text-sm">Yes! Guest passes can be used by any guest you bring to the range. They're included with Silver and Gold memberships.</p>
+                    </div>
+
+                    <div class="bg-slate-800 rounded-lg border border-slate-700 p-6">
+                        <h4 class="font-bold text-amber-500 mb-2">Can I cancel anytime?</h4>
+                        <p class="text-slate-300 text-sm">Absolutely. There's no long-term commitment. Simply notify us 7 days before the end of your billing cycle to cancel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-slate-800 py-12 px-4 mt-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Ready to join?</h3>
+            <p class="text-slate-300 mb-6">Visit us in person or call to start your membership today.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="tel:519-999-9191" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg transition">
+                    Call: 519-999-9191
+                </a>
+                <a href="booking.html" class="bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-8 rounded-lg transition border border-amber-600">
+                    Book a Visit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-700 py-12 px-4 mt-16">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h5 class="font-bold text-amber-500 mb-4">Bob's Gun Store</h5>
+                    <p class="text-slate-400 text-sm">Professional firearms retailer and range facility in Waterloo, Ontario.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 mb-4">Contact</h5>
+                    <p class="text-slate-400 text-sm">Phone: 519-999-9191</p>
+                    <p class="text-slate-400 text-sm">Email: info@bobsgunstore.ca</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 mb-4">Address</h5>
+                    <p class="text-slate-400 text-sm">1247 King Street West</p>
+                    <p class="text-slate-400 text-sm">Waterloo, ON N2J 4Z1</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-amber-500 mb-4">Hours</h5>
+                    <p class="text-slate-400 text-sm">Mon-Fri: 10am - 9pm</p>
+                    <p class="text-slate-400 text-sm">Sat-Sun: 11am - 6pm</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 Bob's Gun Store. All rights reserved. Licensed Firearms Dealer.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
